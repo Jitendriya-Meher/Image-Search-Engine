@@ -1,0 +1,239 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+.search{
+    height: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.container{
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+}
+
+.container h1{
+    font-size: 2.65rem;
+    font-weight: 600;
+}
+
+.container p{
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.search-box{
+    height: 50px;
+    margin: 45px 0;
+    position: relative;
+}
+
+.me{
+    z-index: 100;
+    font-size: 15px;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: #fff;
+}
+
+input, button, i{
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.search-box input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    padding-left: 55px;
+}
+
+.search-box i{
+    position: absolute;
+    left: 20px;
+    top: 30%;
+    font-size: 1.4rem;
+    color: #8d8d8d;
+    transform: translateY(-50%);
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery .images{
+    gap: 15px;
+    columns: 5 340px;
+    margin-top: 40px;
+    max-width: 95%;
+}
+
+.images .card{
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.images img{
+    width: 100%;
+}
+
+.load-more{
+    margin: 50px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 27px;
+    background: #8a6cff;
+}
+
+.load-more.disabled{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.details{
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    padding: 15px 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: bottom 0.2s ease-in-out;
+}
+
+.card:hover .details{
+    bottom: 0;
+}
+
+.photographer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.photographer i{
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+.photographer span{
+    font-size: 1.05rem;
+}
+
+.details button{
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+.lightbox{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    justify-content: center;
+
+    display: none;
+}
+
+.lightbox.show{
+    display: block;
+}
+
+.wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 850px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.wrapper header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p i{
+    font-size: 1.7rem;
+}
+
+.preview-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%;
+}
+
+hader .p{
+    font-size: #333;
+    bottom: 0;
+}
+
+.preview-img .img{
+    height: 70vh;
+    width: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-img .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header .button i{
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    background: #8a6cff;
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+header .button i:last-child{
+    margin-left: 10px;
+    background: #6c757d;
+}
